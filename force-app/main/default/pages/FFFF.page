@@ -1,0 +1,8 @@
+<apex:page id="MainPage"
+           showHeader="false"
+           cache="true"
+           renderAs="PDF" contentType="application/x-pdf#CVRForm.pdf" standardController="Opportunity" extensions="Ppdf">
+    <div class="header">
+        <img src= "https://d2w000007rgzieaw-dev-ed.my.salesforce.com/servlet/servlet.FileDownload?file=0692w00000RFgUWAA1" title="logo" width="173px" height="65px" />
+    </div>
+</apex:page>

@@ -1,0 +1,29 @@
+<template>
+
+        
+<div class="custom-modal">
+  
+        
+            <header class="slds-modal__header">
+                <span class="slds-modal__close">
+                    <lightning-icon icon-name="utility:close" variant="inverse" alternative-text="close"></lightning-icon>
+                </span>
+                <h2 class="slds-text-heading_medium slds-hyphenate">Confirmation? </h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium">
+                <p>Do you want to renew the Contract?</p>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning-button label="No" title="No" class="slds-m-right_small" onclick={closeAction}></lightning-button>
+                <lightning-button variant="brand" label="Yes" title="Yes" onclick={changestatus}></lightning-button>
+            </footer>
+        
+   
+    
+
+
+</div>
+
+     
+      
+</template>

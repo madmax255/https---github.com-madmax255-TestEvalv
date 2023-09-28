@@ -1,0 +1,72 @@
+<aura:component controller ="orderproductquery" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name ="recordId" type ="Id"/>
+    <aura:attribute name ="Order" type ="Order"/>
+    <aura:attribute name ="OrderItems" type ="OrderItem"/>
+    <aura:attribute name ="orderlist" type ="List"/>
+   
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    <div class="slds-scrollable" style="height:12rem;width:35rem">
+       
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+        <thead>
+            <tr class="slds-line-height_reset">
+               
+                <th class="" scope="col">
+                    <div class="slds-size_1-of-2" title="Product Name">Product Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="List Price">List Price</div>
+                </th>
+               
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Unit Price">Unit Price</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Total Price">Total Price</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Quantity">Quantity</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Discount">Discount</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Discount Amount">Discount Amount</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:Iteration items="{!v.OrderItems}" var="item">
+                <tr class="slds-hint-parent">
+                   
+                    <td data-label="Product Name">
+                        <div class="slds-truncate" title="Product Name">{!item.Product2.Name}</div>
+                    </td>
+                    <td data-label="List Price">
+                        <div class="slds-truncate" title="List Price">{!item.ListPrice}</div>
+                    </td>
+                   
+                    <td data-label="Unit Price">
+                        <div class="slds-truncate" title="UnitPrice">
+                            {!item.UnitPrice}
+                        </div>
+                    </td>
+                    <td data-label="Total Price">
+                        <div class="slds-truncate" title="Total Price">{!item.TotalPrice}</div>
+                    </td>
+                    <td data-label="Quantity">
+                        <div class="slds-truncate">
+                        <input type="Number" title="Quantity" value="{!item.Quantity}"/>{!item.Quantity}</div>
+                    </td>
+                    <td data-label="Discount">
+                        <input type="Percent" title="Discount" value="{!item.Discount__c}"/>{!item.Discount__c}
+                    </td>
+                    <td data-label="Discount Amount">
+                        <div class="slds-truncate" title="Discount Amount">{!item.Discount_Amount__c}</div>
+                    </td>
+                </tr>
+            </aura:Iteration>
+        </tbody>
+    </table>
+    </div>
+</aura:component>

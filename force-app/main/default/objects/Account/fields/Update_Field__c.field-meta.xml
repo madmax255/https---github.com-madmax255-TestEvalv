@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Field__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AnnualRevenue &lt; 100000 ,(&apos;&lt;html&gt;&lt;body&gt;&lt;div style=&quot;color: red;&quot;&gt;&lt;b&gt;&apos; &amp; TEXT(AnnualRevenue) &amp; &apos;&lt;/b&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&apos;),
+IF(AnnualRevenue &gt; 100000 ,(&apos;&lt;html&gt;&lt;body&gt;&lt;div style=&quot;color: green;&quot;&gt;&lt;b&gt;&apos; &amp; TEXT(AnnualRevenue) &amp; &apos;&lt;/b&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&apos;),
+&quot;&quot;
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Update Field</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
